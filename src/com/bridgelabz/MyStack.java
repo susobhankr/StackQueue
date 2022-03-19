@@ -10,6 +10,29 @@ public class MyStack {
 	     newNode.next= head;
 	     head=newNode;
 	 }
+	 
+	 public void pop()
+	 {
+	     if (head==null)
+	     {
+	         System.out.println("Stack is Empty");
+	     }
+	     else{
+	         MyNode tempNode = head;
+	         head = head.next;
+	         System.out.println("Popped element is :"+tempNode.data);
+	         }
+	 }
+	 public void peek(){
+	     if(head==null){
+	         System.out.println("Stack is having no values");
+	     }
+	     else
+	     {
+	         System.out.println("The top most Element is " + head.data);
+	     }
+	 }
+
 
 	 public void print(){
 	     MyNode tempNode;
@@ -22,4 +45,4 @@ public class MyStack {
 	     }
 	     System.out.println(tempNode.data);
 	 }
-}
+	}
